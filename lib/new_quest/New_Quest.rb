@@ -1,18 +1,17 @@
-# require './UserClass'
 
 class New_Quest
     def initialize
-        puts "Welcome to Cantor!"
-        puts "Your Jorney is about to Begin!"
-        # @user = User.new()
         @gold = 0
         @health = 0
         @inventory = ''
         @dead = 0
         @inn_entry = false
+        puts "Welcome to Cantor!"
+        puts "Your Journey is about to Begin!"
+        start()
     end
 
-    def Start
+    def start
         puts "What is your name?"
         name = gets.chomp
         puts "Welcome #{name}!"
@@ -147,7 +146,8 @@ class New_Quest
 
     def dead()
         @dead = 1
-        return "You were killed! Try again!"
+        puts "You were killed! Try again!"
+        return
     end
 
     def quest_two()
@@ -394,6 +394,8 @@ class New_Quest
             if win == 1
                 puts "You win the prize pot of 150 gold! You proceed to go to the gate to leave town."
                 @gold = @gold + 150
+                puts "Thank you for playing! That's as far as we go for now!"
+                return
             end
         end
         

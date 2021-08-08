@@ -1,4 +1,4 @@
-require './generator'
+require_relative 'generator'
 
 class Maze
     def initialize
@@ -10,7 +10,7 @@ class Maze
     end
 
     def maze_time(maze,location)
-        puts "\e[2J"
+        system("cls")
         puts "Time to Solve the maze! Please type Up, Down, Left or Right to solve the maze!"
         @moves += 1
         puts "Total Moves: #{@moves}"
@@ -46,8 +46,8 @@ class Maze
             location[1] -= 1
             p location
             if location == [0, 1]
-                print "You solved it!"
-                print "Victory! Total Moves: #{@moves}"
+                puts "You solved it!"
+                puts "Victory! Total Moves: #{@moves}"
                 return "Done!"
             else
                maze_time(maze,location)
@@ -67,8 +67,8 @@ class Maze
             location[1] += 1
             p location
             if location == [0, 1]
-                print "You solved it!"
-                print "Victory! Total Moves: #{@moves}"
+                puts "You solved it!"
+                puts "Victory! Total Moves: #{@moves}"
                 return "Done!"
             else
                maze_time(maze,location)
@@ -87,8 +87,8 @@ class Maze
             location[0] -= 1
             p location
             if location == [0, 1]
-                print "You solved it!"
-                print "Victory! Total Moves: #{@moves}"
+                puts "You solved it!"
+                puts "Victory! Total Moves: #{@moves}"
                 return "Done!"
             else
                maze_time(maze,location)
@@ -108,8 +108,8 @@ class Maze
                location[0] += 1
                p location
                if location == [0, 1]
-                print "You solved it!"
-                print "Victory! Total Moves: #{@moves}"
+                puts "You solved it!"
+                puts "Victory! Total Moves: #{@moves}"
                 return "Done!"
             else
                maze_time(maze,location)

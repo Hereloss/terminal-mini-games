@@ -1,4 +1,4 @@
-class Cocktail_Roulette
+class CocktailRoulette
     def initialize
         puts "Welcome to Cocktail Roulette!"
         @spirits = []
@@ -227,6 +227,7 @@ class Cocktail_Roulette
             spin_it()
         else
             puts "Thanks for playing! Goodbye!"
+            return
         end
     end   
 end

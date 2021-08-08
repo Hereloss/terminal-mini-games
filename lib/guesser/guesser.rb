@@ -2,6 +2,7 @@ class Guesser
   def initialize
     @num_guesses = 0
     @random_num = nil
+    guess()
   end
 
   def guess
